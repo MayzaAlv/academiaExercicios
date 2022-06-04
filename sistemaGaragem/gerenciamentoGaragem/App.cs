@@ -84,6 +84,8 @@ namespace gerenciamentoGaragem
                     veiculos.Add(new Veiculo(vetorDados[0], vetorDados[1]));
 
                 } while (!leitor.EndOfStream); //repete-se a leitura da linha até que o leitor não chegue no final do arquivo
+
+                leitor.Close();
             }
             catch (Exception)
             {
