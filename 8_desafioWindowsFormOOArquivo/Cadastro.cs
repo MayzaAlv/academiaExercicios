@@ -88,7 +88,6 @@ namespace _8_desafioWindowsFormOOArquivo
                         break;
                     }
                 }
-
                 if (verificaPlaca == false)
                 {
                     MessageBox.Show("Placa não encontrada!");

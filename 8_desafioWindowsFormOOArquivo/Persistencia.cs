@@ -23,7 +23,6 @@ namespace _8_desafioWindowsFormOOArquivo
             try
             {
                 leitor = new StreamReader(nomeArquivo);
-
                 do
                 {
                     dados = leitor.ReadLine();
@@ -49,12 +48,10 @@ namespace _8_desafioWindowsFormOOArquivo
         {
             try
             {
-                List<Veiculo> veiculosEntrada = LerArquivoVeiculosEntrada();
                 StreamWriter escritor = new StreamWriter("veiculosEntrada.dat", true);
 
                 escritor.WriteLine(objeto.PlacaVeiculo.ToUpper() + ";" + objeto.DataEntrada
                                   + ";" + objeto.HoraEntrada.ToString("HH:mm"));
- 
                 escritor.Flush();
                 escritor.Close();
             }
