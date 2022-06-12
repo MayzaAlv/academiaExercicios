@@ -10,13 +10,13 @@ using System.Windows.Forms;
 
 namespace _8_desafioWindowsFormOOArquivo
 {
-    public partial class Consulta : Form
+    public partial class FrmConsulta : Form
     { 
         /// <summary>
         /// Construtor da classe consulta que inicia os componentes e método que popula a interface
         /// </summary>
         /// <param name="informa">String que informa se é entrada ou saida</param>
-        public Consulta(string informa)
+        public FrmConsulta(string informa)
         {
             InitializeComponent();
 
@@ -52,14 +52,14 @@ namespace _8_desafioWindowsFormOOArquivo
         {
             if (lblInforma.Text == "Entrada")
             {
-                Cadastro.veiculosEntrada = AtualizarLista(Cadastro.veiculosEntrada);
-                Persistencia.AtualizarArquivo(Cadastro.veiculosEntrada, "veiculosEntrada.dat");
+                FrmCadastro.veiculosEntrada = AtualizarLista(FrmCadastro.veiculosEntrada);
+                Persistencia.AtualizarArquivo(FrmCadastro.veiculosEntrada, "veiculosEntrada.dat");
                 PopularTextBoxListaEntrada();
             }
             else if (lblInforma.Text == "Saída")
             {
-                Cadastro.veiculosSaida = AtualizarLista(Cadastro.veiculosSaida);
-                Persistencia.AtualizarArquivo(Cadastro.veiculosSaida, "veiculosSaida.dat");
+                FrmCadastro.veiculosSaida = AtualizarLista(FrmCadastro.veiculosSaida);
+                Persistencia.AtualizarArquivo(FrmCadastro.veiculosSaida, "veiculosSaida.dat");
                 PopularTextBoxListaSaida();
             }
         }
@@ -70,7 +70,7 @@ namespace _8_desafioWindowsFormOOArquivo
         private void PopularTextBoxListaEntrada()
         {
             txtLista.Text = "";
-            foreach (Veiculo item in Cadastro.veiculosEntrada)
+            foreach (Veiculo item in FrmCadastro.veiculosEntrada)
             {
                 txtLista.AppendText(item.PlacaVeiculo + " - " + item.HoraEntrada.ToString("HH:mm") 
                                     + " - " + item.DataEntrada + Environment.NewLine);
@@ -83,7 +83,7 @@ namespace _8_desafioWindowsFormOOArquivo
         private void PopularTextBoxListaSaida()
         {
             txtLista.Text = "";
-            foreach (Veiculo item in Cadastro.veiculosSaida)
+            foreach (Veiculo item in FrmCadastro.veiculosSaida)
             {
                 txtLista.AppendText(item.PlacaVeiculo + " - " + item.TempoPermanencia
                                     + " - " + item.ValorCobrado + Environment.NewLine);
@@ -95,7 +95,7 @@ namespace _8_desafioWindowsFormOOArquivo
         /// </summary>
         private void PopularCheckBoxEntrada()
         {
-            foreach (Veiculo item in Cadastro.veiculosEntrada)
+            foreach (Veiculo item in FrmCadastro.veiculosEntrada)
             {
                 cbLista.Items.Add(item.PlacaVeiculo);
             }
@@ -106,7 +106,7 @@ namespace _8_desafioWindowsFormOOArquivo
         /// </summary>
         private void PopularCheckBoxSaida()
         {
-            foreach (Veiculo item in Cadastro.veiculosSaida)
+            foreach (Veiculo item in FrmCadastro.veiculosSaida)
             {
                 cbLista.Items.Add(item.PlacaVeiculo);
             }

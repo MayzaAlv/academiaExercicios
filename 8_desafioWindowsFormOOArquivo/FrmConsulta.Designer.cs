@@ -1,6 +1,6 @@
 ﻿namespace _8_desafioWindowsFormOOArquivo
 {
-    partial class Consulta
+    partial class FrmConsulta
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Consulta));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmConsulta));
             this.txtLista = new System.Windows.Forms.TextBox();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.tsmiLista = new System.Windows.Forms.ToolStripMenuItem();
@@ -86,7 +86,7 @@
             this.cbLista.Location = new System.Drawing.Point(121, 44);
             this.cbLista.Name = "cbLista";
             this.cbLista.Size = new System.Drawing.Size(160, 21);
-            this.cbLista.TabIndex = 5;
+            this.cbLista.TabIndex = 0;
             // 
             // lblPlaca
             // 
@@ -108,7 +108,7 @@
             this.btnRemover.Location = new System.Drawing.Point(430, 42);
             this.btnRemover.Name = "btnRemover";
             this.btnRemover.Size = new System.Drawing.Size(77, 22);
-            this.btnRemover.TabIndex = 8;
+            this.btnRemover.TabIndex = 1;
             this.btnRemover.Text = "Remover";
             this.btnRemover.UseVisualStyleBackColor = false;
             this.btnRemover.Click += new System.EventHandler(this.btnRemover_Click);

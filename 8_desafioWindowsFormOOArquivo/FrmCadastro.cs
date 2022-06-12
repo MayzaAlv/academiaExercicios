@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace _8_desafioWindowsFormOOArquivo
 {
-    public partial class Cadastro : Form
+    public partial class FrmCadastro : Form
     {
         /// <summary>
         /// Listas dos veículos de entrada e saída
@@ -22,7 +22,7 @@ namespace _8_desafioWindowsFormOOArquivo
         /// Construtor com as configurações do programa e iniciando as listas com 
         /// dados do arquivo, ademais, exibindo a data do momento
         /// </summary>
-        public Cadastro()
+        public FrmCadastro()
         {
             InitializeComponent();
             veiculosEntrada = Persistencia.LerArquivoVeiculosEntrada();
@@ -42,7 +42,7 @@ namespace _8_desafioWindowsFormOOArquivo
             {
                 Veiculo veiculo = new Veiculo(txtData.Text, DateTime.Parse(mtbHora.Text), txtPlaca.Text);
 
-                if (!Veiculo.VerificarCadastro(veiculo, veiculosEntrada) &&
+                if (!Veiculo.VerificarCadastro(veiculo, veiculosEntrada) ||
                      Veiculo.LugarDisponiveis(veiculosEntrada, 50))
                 {
                     Persistencia.GravarArquivoVeiculosEntrada(veiculo);
@@ -51,16 +51,18 @@ namespace _8_desafioWindowsFormOOArquivo
                     MessageBox.Show("Placa: " + veiculo.PlacaVeiculo.ToUpper()
                                     + "\nHora De Entrada: " + veiculo.HoraEntrada.ToString("HH:mm")
                                     + "\nData de Entrada: " + veiculo.DataEntrada,
-                                    "Placa Cadastrada com sucesso");
+                                    "Placa Cadastrada com sucesso", MessageBoxButtons.OK, 
+                                    MessageBoxIcon.Information);
                 }
                 else
                 {
-                    MessageBox.Show("Carro com essa placa já está na base de dados!");
+                    MessageBox.Show("Carro com essa placa já está na base de dados!", "Aviso", 
+                                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             else
             {
-                MessageBox.Show("Dados inválidos!", "Alerta");
+                MessageBox.Show("Dados inválidos!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -80,7 +82,7 @@ namespace _8_desafioWindowsFormOOArquivo
 
                 foreach (Veiculo item in veiculosEntrada)
                 {
-                    if (txtPlaca.Text == item.PlacaVeiculo)
+                    if (txtPlaca.Text.ToUpper() == item.PlacaVeiculo)
                     {
                         veiculo = item;
                         verificaPlaca = true;
@@ -90,23 +92,25 @@ namespace _8_desafioWindowsFormOOArquivo
                 }
                 if (verificaPlaca == false)
                 {
-                    MessageBox.Show("Placa não encontrada!");
+                    MessageBox.Show("Placa não encontrada!", "Erro", MessageBoxButtons.OK, 
+                                    MessageBoxIcon.Error);
                     return;
                 }
 
                 CalcularTempoPermanencia(veiculo);
                 Persistencia.GravarArquivoVeiculosSaida(veiculo);
                 Persistencia.AtualizarArquivo(veiculosEntrada, "veiculosEntrada.dat");
-
                 veiculosSaida = Persistencia.LerArquivoVeiculosSaida();
+
                 MessageBox.Show("Placa: " + veiculo.PlacaVeiculo.ToUpper()
                                 + "\nTempo de permanencia: " + veiculo.TempoPermanencia + " minutos"
                                 + "\nValor Total: R$" + veiculo.ValorCobrado + ".00",
-                                "Saída feita com sucesso");
+                                "Saída feita com sucesso", MessageBoxButtons.OK, 
+                                MessageBoxIcon.Information);
             }
             else 
             {
-                MessageBox.Show("Dados inválidos!", "Alerta");
+                MessageBox.Show("Dados inválidos!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -117,7 +121,7 @@ namespace _8_desafioWindowsFormOOArquivo
         /// <param name="e"></param>
         private void tsmiEntrada_Click(object sender, EventArgs e)
         {
-            var consulta = new Consulta("Entrada");
+            var consulta = new FrmConsulta("Entrada");
             this.Hide();
             consulta.ShowDialog();
             this.Show();
@@ -130,7 +134,7 @@ namespace _8_desafioWindowsFormOOArquivo
         /// <param name="e"></param>
         private void tsmiSaida_Click(object sender, EventArgs e)
         {
-            var consulta = new Consulta("Saída");
+            var consulta = new FrmConsulta("Saída");
             this.Hide();
             consulta.ShowDialog();
             this.Show();

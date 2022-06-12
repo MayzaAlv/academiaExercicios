@@ -1,6 +1,6 @@
 ﻿namespace _8_desafioWindowsFormOOArquivo
 {
-    partial class Cadastro
+    partial class FrmCadastro
     {
         /// <summary>
         /// Variável de designer necessária.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cadastro));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCadastro));
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.tsmiLista = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiEntrada = new System.Windows.Forms.ToolStripMenuItem();
@@ -84,7 +84,7 @@
             this.txtPlaca.Multiline = true;
             this.txtPlaca.Name = "txtPlaca";
             this.txtPlaca.Size = new System.Drawing.Size(188, 30);
-            this.txtPlaca.TabIndex = 2;
+            this.txtPlaca.TabIndex = 0;
             this.txtPlaca.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lblPlaca
@@ -94,7 +94,7 @@
             this.lblPlaca.Location = new System.Drawing.Point(134, 158);
             this.lblPlaca.Name = "lblPlaca";
             this.lblPlaca.Size = new System.Drawing.Size(72, 27);
-            this.lblPlaca.TabIndex = 3;
+            this.lblPlaca.TabIndex = 1;
             this.lblPlaca.Text = "Placa:";
             this.lblPlaca.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -108,7 +108,7 @@
             this.btnEntrada.Location = new System.Drawing.Point(228, 239);
             this.btnEntrada.Name = "btnEntrada";
             this.btnEntrada.Size = new System.Drawing.Size(86, 42);
-            this.btnEntrada.TabIndex = 4;
+            this.btnEntrada.TabIndex = 3;
             this.btnEntrada.Text = "Entrada";
             this.btnEntrada.UseVisualStyleBackColor = false;
             this.btnEntrada.Click += new System.EventHandler(this.btnEntrada_Click);
@@ -123,7 +123,7 @@
             this.btnSaida.Location = new System.Drawing.Point(330, 239);
             this.btnSaida.Name = "btnSaida";
             this.btnSaida.Size = new System.Drawing.Size(86, 41);
-            this.btnSaida.TabIndex = 5;
+            this.btnSaida.TabIndex = 4;
             this.btnSaida.Text = "Saida";
             this.btnSaida.UseVisualStyleBackColor = false;
             this.btnSaida.Click += new System.EventHandler(this.btnSaida_Click);
@@ -135,7 +135,7 @@
             this.txtData.Multiline = true;
             this.txtData.Name = "txtData";
             this.txtData.Size = new System.Drawing.Size(86, 26);
-            this.txtData.TabIndex = 9;
+            this.txtData.TabIndex = 2;
             this.txtData.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label1
@@ -145,7 +145,7 @@
             this.label1.Location = new System.Drawing.Point(134, 200);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(77, 30);
-            this.label1.TabIndex = 11;
+            this.label1.TabIndex = 2;
             this.label1.Text = "Horário:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -157,12 +157,12 @@
             this.mtbHora.Mask = "00:00";
             this.mtbHora.Name = "mtbHora";
             this.mtbHora.Size = new System.Drawing.Size(86, 24);
-            this.mtbHora.TabIndex = 12;
+            this.mtbHora.TabIndex = 1;
             this.mtbHora.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.mtbHora.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePromptAndLiterals;
             this.mtbHora.ValidatingType = typeof(System.DateTime);
             // 
-            // Cadastro
+            // FrmCadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -182,7 +182,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip;
-            this.Name = "Cadastro";
+            this.Name = "FrmCadastro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Garagest";
             this.menuStrip.ResumeLayout(false);

@@ -16,7 +16,7 @@ namespace _8_desafioWindowsFormOOArquivo
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Cadastro());
+            Application.Run(new FrmCadastro());
         }
     }
 }
