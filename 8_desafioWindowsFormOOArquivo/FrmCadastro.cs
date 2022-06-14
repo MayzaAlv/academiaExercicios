@@ -43,7 +43,7 @@ namespace _8_desafioWindowsFormOOArquivo
                 Veiculo veiculo = new Veiculo(txtData.Text, DateTime.Parse(mtbHora.Text), txtPlaca.Text);
 
                 if (!Veiculo.VerificarCadastro(veiculo, veiculosEntrada) ||
-                     Veiculo.LugarDisponiveis(veiculosEntrada, 50))
+                     Veiculo.LugarDisponiveis(veiculosEntrada, 50) == false)
                 {
                     Persistencia.GravarArquivoVeiculosEntrada(veiculo);
                     veiculosEntrada = Persistencia.LerArquivoVeiculosEntrada();

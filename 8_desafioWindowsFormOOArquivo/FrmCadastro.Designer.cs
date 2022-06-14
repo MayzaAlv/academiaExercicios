@@ -59,6 +59,7 @@
             this.tsmiLista.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiEntrada,
             this.tsmiSaida});
+            this.tsmiLista.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.tsmiLista.Name = "tsmiLista";
             this.tsmiLista.Size = new System.Drawing.Size(66, 20);
             this.tsmiLista.Text = "Consulta";
@@ -66,14 +67,14 @@
             // tsmiEntrada
             // 
             this.tsmiEntrada.Name = "tsmiEntrada";
-            this.tsmiEntrada.Size = new System.Drawing.Size(114, 22);
+            this.tsmiEntrada.Size = new System.Drawing.Size(180, 22);
             this.tsmiEntrada.Text = "Entrada";
             this.tsmiEntrada.Click += new System.EventHandler(this.tsmiEntrada_Click);
             // 
             // tsmiSaida
             // 
             this.tsmiSaida.Name = "tsmiSaida";
-            this.tsmiSaida.Size = new System.Drawing.Size(114, 22);
+            this.tsmiSaida.Size = new System.Drawing.Size(180, 22);
             this.tsmiSaida.Text = "Saida";
             this.tsmiSaida.Click += new System.EventHandler(this.tsmiSaida_Click);
             // 
