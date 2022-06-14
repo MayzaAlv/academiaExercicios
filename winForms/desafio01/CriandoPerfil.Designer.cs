@@ -1,6 +1,6 @@
 ﻿namespace desafio01
 {
-    partial class Form1
+    partial class CriandoPerfil
     {
         /// <summary>
         /// Variável de designer necessária.
@@ -44,6 +44,8 @@
             this.cbTipo = new System.Windows.Forms.ComboBox();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
+            this.AbrirArquivo = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.SuspendLayout();
             // 
             // lblNome
@@ -147,6 +149,7 @@
             // 
             // cbStatus
             // 
+            this.cbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbStatus.FormattingEnabled = true;
             this.cbStatus.Items.AddRange(new object[] {
             "Ativo",
@@ -158,6 +161,7 @@
             // 
             // cbTipo
             // 
+            this.cbTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTipo.FormattingEnabled = true;
             this.cbTipo.Items.AddRange(new object[] {
             "Administrador",
@@ -170,9 +174,9 @@
             // btnSalvar
             // 
             this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSalvar.Location = new System.Drawing.Point(54, 247);
+            this.btnSalvar.Location = new System.Drawing.Point(27, 247);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(103, 43);
+            this.btnSalvar.Size = new System.Drawing.Size(75, 54);
             this.btnSalvar.TabIndex = 14;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
@@ -181,20 +185,37 @@
             // btnSair
             // 
             this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSair.Location = new System.Drawing.Point(205, 247);
+            this.btnSair.Location = new System.Drawing.Point(230, 247);
             this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(103, 43);
+            this.btnSair.Size = new System.Drawing.Size(78, 54);
             this.btnSair.TabIndex = 15;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = true;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
+            // AbrirArquivo
+            // 
+            this.AbrirArquivo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.AbrirArquivo.Location = new System.Drawing.Point(121, 247);
+            this.AbrirArquivo.Name = "AbrirArquivo";
+            this.AbrirArquivo.Size = new System.Drawing.Size(84, 54);
+            this.AbrirArquivo.TabIndex = 16;
+            this.AbrirArquivo.Text = "Abrir Arquivo";
+            this.AbrirArquivo.UseVisualStyleBackColor = true;
+            this.AbrirArquivo.Click += new System.EventHandler(this.AbrirArquivo_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(331, 322);
+            this.ClientSize = new System.Drawing.Size(324, 326);
+            this.Controls.Add(this.AbrirArquivo);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.cbTipo);
@@ -237,6 +258,8 @@
         private System.Windows.Forms.ComboBox cbTipo;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnSair;
+        private System.Windows.Forms.Button AbrirArquivo;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
 
