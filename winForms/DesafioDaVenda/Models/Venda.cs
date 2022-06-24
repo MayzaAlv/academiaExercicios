@@ -15,6 +15,7 @@ namespace DesafioDaVenda.Models
         /// </summary>
         private int id, clienteId;
         private double valorTotal;
+        private Cliente cliente;
 
         [Key]
         [Required]
@@ -23,6 +24,8 @@ namespace DesafioDaVenda.Models
         [ForeignKey("Cliente")]
         public int ClienteId { get => clienteId; set => clienteId = value; }
         public double ValorTotal { get => valorTotal; set => valorTotal = value; }
+        // Campo requirido para ser feita a ligação e criação da foreign key
+        public Cliente Cliente { get => cliente; set => cliente = value; }
 
         /// <summary>
         /// Construtor da classe Venda

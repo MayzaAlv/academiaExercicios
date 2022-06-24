@@ -15,6 +15,8 @@ namespace DesafioDaVenda.Models
         /// </summary>
         private int id, vendaId, produtoId, quantidade;
         private double valorTotal;
+        private Produto produto;
+        private Venda venda;
 
         [Key]
         [Required]
@@ -28,6 +30,10 @@ namespace DesafioDaVenda.Models
         [Required]
         public int Quantidade { get => quantidade; set => quantidade = value; }
         public double ValorTotal { get => valorTotal; set => valorTotal = value; }
+        
+        // Campo requirido para ser feita a ligação e criação da foreign key
+        public Produto Produto { get => produto; set => produto = value; }
+        public Venda Venda { get => venda; set => venda = value; }
 
         /// <summary>
         /// Construtor da classe ItemVenda
