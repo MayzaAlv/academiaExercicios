@@ -54,7 +54,7 @@
             // lblTotal
             // 
             this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.Location = new System.Drawing.Point(254, 316);
+            this.lblTotal.Location = new System.Drawing.Point(348, 317);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(90, 28);
             this.lblTotal.TabIndex = 2;
@@ -73,17 +73,19 @@
             // 
             // tbQtd
             // 
+            this.tbQtd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbQtd.Location = new System.Drawing.Point(89, 76);
             this.tbQtd.Name = "tbQtd";
-            this.tbQtd.Size = new System.Drawing.Size(113, 20);
+            this.tbQtd.Size = new System.Drawing.Size(113, 21);
             this.tbQtd.TabIndex = 5;
             // 
             // tbTotal
             // 
             this.tbTotal.Enabled = false;
-            this.tbTotal.Location = new System.Drawing.Point(350, 322);
+            this.tbTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbTotal.Location = new System.Drawing.Point(444, 317);
             this.tbTotal.Name = "tbTotal";
-            this.tbTotal.Size = new System.Drawing.Size(113, 20);
+            this.tbTotal.Size = new System.Drawing.Size(73, 27);
             this.tbTotal.TabIndex = 7;
             // 
             // lvVenda
@@ -109,8 +111,8 @@
             // 
             // id
             // 
-            this.id.Text = "N° do item ";
-            this.id.Width = 78;
+            this.id.Text = "N° ";
+            this.id.Width = 32;
             // 
             // codigo
             // 
@@ -120,6 +122,7 @@
             // nomeProduto
             // 
             this.nomeProduto.Text = "Produto";
+            this.nomeProduto.Width = 104;
             // 
             // quantidade
             // 
@@ -143,7 +146,7 @@
             this.btnFinalizar.FlatAppearance.BorderColor = System.Drawing.Color.SlateBlue;
             this.btnFinalizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFinalizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFinalizar.Location = new System.Drawing.Point(496, 308);
+            this.btnFinalizar.Location = new System.Drawing.Point(542, 307);
             this.btnFinalizar.Name = "btnFinalizar";
             this.btnFinalizar.Size = new System.Drawing.Size(113, 47);
             this.btnFinalizar.TabIndex = 9;
@@ -204,9 +207,10 @@
             // 
             // tbCodigo
             // 
+            this.tbCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbCodigo.Location = new System.Drawing.Point(89, 33);
             this.tbCodigo.Name = "tbCodigo";
-            this.tbCodigo.Size = new System.Drawing.Size(113, 20);
+            this.tbCodigo.Size = new System.Drawing.Size(113, 21);
             this.tbCodigo.TabIndex = 1;
             // 
             // pbLogo

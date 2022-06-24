@@ -20,6 +20,11 @@ namespace DesafioDaVenda
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Adicionando um cliente no banco, filtrando pelas validações
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
             try

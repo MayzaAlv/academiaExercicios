@@ -19,6 +19,12 @@ namespace DesafioDaVenda
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Conectando o cliente através do CPF a venda,
+        /// ademais, validações para saber se existe no banco
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
             try
@@ -28,9 +34,9 @@ namespace DesafioDaVenda
                 frm.Show();
                 this.Close();
             }
-            catch(Exception error)
+            catch(Exception)
             {
-                MessageBox.Show("Usuário não cadastrado " + error.Message, "Erro",
+                MessageBox.Show("Usuário não cadastrado ", "Erro",
                 MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }

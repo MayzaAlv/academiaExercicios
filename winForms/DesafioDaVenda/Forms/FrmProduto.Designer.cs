@@ -49,10 +49,12 @@
             // 
             // tbNome
             // 
+            this.tbNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbNome.Location = new System.Drawing.Point(306, 178);
             this.tbNome.Name = "tbNome";
-            this.tbNome.Size = new System.Drawing.Size(123, 20);
+            this.tbNome.Size = new System.Drawing.Size(123, 21);
             this.tbNome.TabIndex = 0;
+            this.tbNome.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lblNome
             // 
@@ -96,24 +98,30 @@
             // 
             // tbPreco
             // 
+            this.tbPreco.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbPreco.Location = new System.Drawing.Point(306, 262);
             this.tbPreco.Name = "tbPreco";
-            this.tbPreco.Size = new System.Drawing.Size(123, 20);
+            this.tbPreco.Size = new System.Drawing.Size(123, 21);
             this.tbPreco.TabIndex = 7;
+            this.tbPreco.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tbCodigo
             // 
+            this.tbCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbCodigo.Location = new System.Drawing.Point(306, 208);
             this.tbCodigo.Name = "tbCodigo";
-            this.tbCodigo.Size = new System.Drawing.Size(123, 20);
+            this.tbCodigo.Size = new System.Drawing.Size(123, 21);
             this.tbCodigo.TabIndex = 9;
+            this.tbCodigo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tbEstoque
             // 
+            this.tbEstoque.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbEstoque.Location = new System.Drawing.Point(306, 236);
             this.tbEstoque.Name = "tbEstoque";
-            this.tbEstoque.Size = new System.Drawing.Size(123, 20);
+            this.tbEstoque.Size = new System.Drawing.Size(123, 21);
             this.tbEstoque.TabIndex = 10;
+            this.tbEstoque.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnConfirmar
             // 

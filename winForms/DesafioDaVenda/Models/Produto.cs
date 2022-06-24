@@ -9,6 +9,9 @@ namespace DesafioDaVenda.Models
 {
     public class Produto
     {
+        /// <summary>
+        /// Atributos da tabela Produto
+        /// </summary>
         private int id, estoque;
         private string nome, codigoEan;
         private double preco;
@@ -24,6 +27,13 @@ namespace DesafioDaVenda.Models
         [Required]
         public double Preco { get => preco; set => preco = value; }
 
+        /// <summary>
+        /// Construtor da classe Produto
+        /// </summary>
+        /// <param name="nome"></param>
+        /// <param name="codigoEan"></param>
+        /// <param name="preco"></param>
+        /// <param name="estoque"></param>
         public Produto(string nome, string codigoEan, double preco, int estoque)
         {
             Nome = nome;

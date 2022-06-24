@@ -8,7 +8,10 @@ using System.Threading.Tasks;
 namespace DesafioDaVenda.Models
 {
     public class Cliente
-    {
+    {   
+        /// <summary>
+        /// Atributos da tabela Cliente
+        /// </summary>
         private int id;
         private string nome, email, cpf, telefone;
 
@@ -23,7 +26,13 @@ namespace DesafioDaVenda.Models
         public string Cpf { get => cpf; set => cpf = value; }
         public string Telefone { get => telefone; set => telefone = value; }
 
-
+        /// <summary>
+        /// Costrutor da classe
+        /// </summary>
+        /// <param name="nome"></param>
+        /// <param name="email"></param>
+        /// <param name="cpf"></param>
+        /// <param name="telefone"></param>
         public Cliente(string nome, string email, string cpf, string telefone)
         {
             Nome = nome;

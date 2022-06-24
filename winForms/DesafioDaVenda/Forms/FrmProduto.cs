@@ -20,6 +20,11 @@ namespace DesafioDaVenda
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Criando novo produto no banco e validações se existe
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
             if (_context.Produtos.FirstOrDefault(pd => pd.Nome == tbNome.Text) == null 
@@ -36,11 +41,16 @@ namespace DesafioDaVenda
             }
             else
             {
-                MessageBox.Show("Produto já está cadastrado", "Conflito",
+                MessageBox.Show("Campo inválido", "Erro",
                 MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
+        /// <summary>
+        /// Atualizando produto no banco, seu estoque e preço
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAtualizar_Click(object sender, EventArgs e)
         {
             try
@@ -71,6 +81,11 @@ namespace DesafioDaVenda
             }
         }
 
+        /// <summary>
+        /// Removendo produto do banco
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnRemover_Click(object sender, EventArgs e)
         {
             try
@@ -99,6 +114,9 @@ namespace DesafioDaVenda
             }
         }
 
+        /// <summary>
+        /// Método que mostra informação do produto na tela
+        /// </summary>
         private void MostrarProduto()
         {
             Produto produto = _context.Produtos.FirstOrDefault(pd => pd.Nome == tbNome.Text);
@@ -108,6 +126,9 @@ namespace DesafioDaVenda
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
+        /// <summary>
+        /// Método para limpar os campos da interface
+        /// </summary>
         private void LimparCampos()
         {
             tbNome.Text = tbCodigo.Text = tbEstoque.Text = tbPreco.Text = "";

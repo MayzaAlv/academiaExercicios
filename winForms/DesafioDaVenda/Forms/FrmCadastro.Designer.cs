@@ -48,9 +48,10 @@
             // 
             // tbNome
             // 
+            this.tbNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbNome.Location = new System.Drawing.Point(298, 186);
             this.tbNome.Name = "tbNome";
-            this.tbNome.Size = new System.Drawing.Size(123, 20);
+            this.tbNome.Size = new System.Drawing.Size(123, 21);
             this.tbNome.TabIndex = 0;
             // 
             // lblNome
@@ -95,27 +96,30 @@
             // 
             // tbEmail
             // 
+            this.tbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbEmail.Location = new System.Drawing.Point(298, 244);
             this.tbEmail.Name = "tbEmail";
-            this.tbEmail.Size = new System.Drawing.Size(123, 20);
+            this.tbEmail.Size = new System.Drawing.Size(123, 21);
             this.tbEmail.TabIndex = 6;
             // 
             // mtbCpf
             // 
+            this.mtbCpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mtbCpf.Location = new System.Drawing.Point(298, 212);
             this.mtbCpf.Mask = "000.000.000-00";
             this.mtbCpf.Name = "mtbCpf";
-            this.mtbCpf.Size = new System.Drawing.Size(123, 20);
+            this.mtbCpf.Size = new System.Drawing.Size(123, 21);
             this.mtbCpf.TabIndex = 7;
             this.mtbCpf.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.mtbCpf.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // mtbTelefone
             // 
+            this.mtbTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mtbTelefone.Location = new System.Drawing.Point(298, 270);
             this.mtbTelefone.Mask = "(00) 00000-0000";
             this.mtbTelefone.Name = "mtbTelefone";
-            this.mtbTelefone.Size = new System.Drawing.Size(123, 20);
+            this.mtbTelefone.Size = new System.Drawing.Size(123, 21);
             this.mtbTelefone.TabIndex = 8;
             this.mtbTelefone.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.mtbTelefone.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
