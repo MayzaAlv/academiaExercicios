@@ -169,9 +169,7 @@ namespace _8_desafioWindowsFormOOArquivo
             return txtPlaca.Text.Count() == 7
                    && txtData.Text.Count() == 10 
                    && mtbHora.Text.Count() == 5 
-                   && txtPlaca.Text.Count() > 0
-                   && DateTime.Parse(mtbHora.Text).Hour > 7
-                   && DateTime.Parse(mtbHora.Text).Hour < 20;
+                   && txtPlaca.Text.Count() > 0;
         }
     }
 }
