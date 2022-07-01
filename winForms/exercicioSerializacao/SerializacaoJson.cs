@@ -1,9 +1,9 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
-using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -11,20 +11,20 @@ namespace exercicioSerializacao
 {
     public class SerializacaoJson
     {
-        static string path = "C:\\Users\\mayza\\source\\repos\\academiaExercicios\\winForms\\exercicioSerializacao\\arquivos\\serializacao.json";
+        public static string path = @"C:\teste\paciente.json";
 
         public static void Serializacao(List<Paciente> paciente)
         {
             try
             {
-                string jsonString = JsonSerializer.Serialize(paciente);
-                StreamWriter escritor = new StreamWriter(path, true);
-                escritor.WriteLine(jsonString);
-                escritor.Flush();
-                escritor.Close();
+                JsonSerializer serializadorJSON = new JsonSerializer();
+                StreamWriter procurador = new StreamWriter(path);
+                JsonWriter escritorJSON = new JsonTextWriter(procurador);
+                serializadorJSON.Serialize(escritorJSON, paciente);
+                procurador.Close();
+                escritorJSON.Close();
 
                 MessageBox.Show("Sucesso para serializar com JSON");
-                Application.Exit();
 
             }
             catch (Exception ex)
@@ -35,15 +35,24 @@ namespace exercicioSerializacao
 
         public static void DesserializarJson()
         {
-            string json = File.ReadAllText(path);
+            try
+            {
+                string json = File.ReadAllText(path);
+                List<Paciente> pacientes = JsonConvert.DeserializeObject<List<Paciente>>(json);
 
-            Paciente p = JsonSerializer.Deserialize<Paciente>(json);
 
+                string resposta = "";
+                foreach (Paciente paciente in pacientes)
+                {
+                    resposta = resposta + paciente.Nome + "\n";
+                }
 
-            //foreach (Paciente item in p)
-            //{
-            //    MessageBox.Show("Nome: " + item.Nome + " Idade: " + item.DataNascimento + " Cpf: " + item.Cpf);
-            //}
+                MessageBox.Show(resposta, "Alerta");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.Message);
+            }
         }
     }
 }

@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace exercicioSerializacao
 {
-    public partial class Form1 : Form
+    public partial class Serializacao : Form
     {
         List<Paciente> pacientes = new List<Paciente>();
-        public Form1()
+        public Serializacao()
         {
             InitializeComponent();
         }
@@ -25,9 +25,10 @@ namespace exercicioSerializacao
             LimparCampos();
         }
 
-        private void btnFinalizar_Click(object sender, EventArgs e)
+        private void btnSerializar_Click(object sender, EventArgs e)
         {
             SerializacaoJson.Serializacao(pacientes);
+            tbLista.Text = Arquivo.lerArquivo(SerializacaoJson.path);
         }
 
         private void LimparCampos()
@@ -35,7 +36,7 @@ namespace exercicioSerializacao
             tbNome.Text = tbData.Text = tbCpf.Text = "";
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnDesserializar_Click(object sender, EventArgs e)
         {
             SerializacaoJson.DesserializarJson();
         }
