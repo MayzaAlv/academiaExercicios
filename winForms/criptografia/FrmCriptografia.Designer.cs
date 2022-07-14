@@ -82,9 +82,8 @@
             this.lblCripto.AutoSize = true;
             this.lblCripto.Location = new System.Drawing.Point(117, 135);
             this.lblCripto.Name = "lblCripto";
-            this.lblCripto.Size = new System.Drawing.Size(10, 13);
+            this.lblCripto.Size = new System.Drawing.Size(0, 13);
             this.lblCripto.TabIndex = 6;
-            this.lblCripto.Text = "-";
             // 
             // btnDescriptoAssimetrico
             // 
@@ -110,9 +109,8 @@
             this.lblDescripto.AutoSize = true;
             this.lblDescripto.Location = new System.Drawing.Point(138, 212);
             this.lblDescripto.Name = "lblDescripto";
-            this.lblDescripto.Size = new System.Drawing.Size(10, 13);
+            this.lblDescripto.Size = new System.Drawing.Size(0, 13);
             this.lblDescripto.TabIndex = 9;
-            this.lblDescripto.Text = "-";
             // 
             // tbChave
             // 
